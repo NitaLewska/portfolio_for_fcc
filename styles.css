@@ -1,0 +1,245 @@
+/* Box Model Fix */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+}
+
+main {    
+    background-color: #30343F;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    background-color: #30343F;
+    color: #FAFAFF;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/src/projects_full/House.jpg);
+    background-position-x: center;
+    background-size: cover;
+    font-family: 'Rock Salt', cursive;
+    font-size: 25px;
+    text-shadow: 2px 1px 5px rgb(58, 58, 58);
+}
+nav {
+    position:fixed;
+    top: 0;
+    height: 60px;
+    width:100%;
+
+    background-color:#C3F73A;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline-start: 0px;
+}
+
+nav ul li {
+    display: block;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+    transition: 500ms;
+}
+nav a:hover {
+    font-size: larger;
+    color:white;
+}
+
+.about {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about img {
+    height: 70vh;
+    margin-right: 10vw;
+    border-radius: 4%;
+    border: solid 4px #C3F73A;
+}
+.about div {
+    margin-left: 10vw;
+    margin-right: 7vw;
+    font-size: 20px;
+}
+.about p{
+    padding: 10px;
+}
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 10% 0;
+    background-color:whitesmoke;
+}
+
+.skills h3{
+    font-size: 2em;
+    grid-column: 1/6;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.skill img {
+    height: 15vw;
+    border: 7px rgb(230, 238, 227) outset;
+    border-radius: 10px;
+    background-color:white;
+    display: flex;
+    margin: 0 auto;
+
+}
+.projects {
+    margin: 0 auto;
+    width: 90%;
+    padding: 10% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: space-around;
+}
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 28vw;
+    height: 23vw;
+
+}
+.project-tile img{
+    width: 95%;
+    margin: 0 auto;
+    height: auto;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(248, 213, 237, 0.75);
+    -moz-box-shadow:    5px 5px 15px 0px rgba(248, 213, 237, 0.75);
+    box-shadow:         5px 5px 15px 0px rgba(248, 213, 237, 0.75);
+    transition: 800ms;
+}
+
+.project-tile img:hover{
+    width: 102%;
+}
+.links {
+    background-color:whitesmoke;
+    height: 300px;
+    display:flex;
+    align-items: center;
+}
+.links ul {
+    width:100vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline-start: 0px;
+    align-items: center;
+}
+.links a {
+    text-decoration: none;
+}
+
+.links img {
+    border-radius: 50%;
+    width: 200px;
+}
+footer{
+    background-color:#C3F73A;
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    height: 30px;
+}
+footer h4 {
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+}
+@media(max-width: 600px) {
+header {
+    font-size: 10px;
+}
+
+nav ul li{
+    font-size: 15px;
+}
+
+.about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column-reverse;
+    height: auto;
+}
+
+.about img {
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill img {
+    height: 30vw;
+}
+
+.projects {
+    grid-template-columns: 1fr;
+}
+.project-tile {
+    width: 84vw;
+    height: 69vw;
+}
+.links {
+    height: 100px;
+}
+
+.links img{
+    height:80px;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+}
+}
+
+@media(max-width: 799px) {
+    .about {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .about img {
+        margin: 0 auto;
+        width: 300px;
+        height: auto;
+    }
+    .links {
+        height: 120px;
+    }
+    .links img{
+        height:100px;
+        width: auto;
+    }
+}
