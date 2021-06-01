@@ -20,7 +20,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(/src/projects_full/House.jpg);
+    background-image: url(src/projects_full/House.jpg);
     background-position-x: center;
     background-size: cover;
     font-family: 'Rock Salt', cursive;
